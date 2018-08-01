@@ -8,7 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    defText:'这是一个很好玩得栗子！'
+    defText:'这是一个很好玩的栗子！'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -56,5 +56,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onShareAppMessage:function () {
+    return {
+      title:'欢迎使用栗子的小程序',
+      path: 'pages/test/test'
+
+    }
   }
 })
