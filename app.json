@@ -79,7 +79,9 @@
     "page/API/pages/open-location/open-location",
     "page/API/pages/choose-location/choose-location",
 
-    "page/API/pages/storage/storage"
+    "page/API/pages/storage/storage",
+
+    "pages/index/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -102,6 +104,11 @@
       "iconPath": "image/icon_API.png",
       "selectedIconPath": "image/icon_API_HL.png",
       "text": "接口"
+    },{
+      "pagePath": "pages/index/index",
+      "iconPath": "image/wechat.png",
+      "selectedIconPath": "image/wechatHL.png",
+      "text": "好陪护"
     }]
   },
   "networkTimeout": {

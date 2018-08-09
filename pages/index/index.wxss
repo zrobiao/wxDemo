@@ -1,3 +1,4 @@
+@import "../common/iconfont.wxss";
 /**index.wxss**/
 .userinfo {
   display: flex;
@@ -15,7 +16,35 @@
 .userinfo-nickname {
   color: #aaa;
 }
-
-.usermotto {
-  margin-top: 200px;
+.slide-item{
+  width:100%;
+  height:240px;
+}
+.slide-image{
+  width:100%;
+  height:240px;
+}
+.view-items{
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding:6px 0;
+}
+.view-items-icon{
+  flex:0 0 auto;
+  width:50px;
+  height:40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px;
+  color:#333;
+}
+.view-items-txt{
+  flex:0 0 auto;
+  padding:0 15px;
+  font-size: 20px;
+  color:#666;
+}
+.view-items-box{
+  flex:1;
 }

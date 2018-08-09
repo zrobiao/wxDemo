@@ -28,6 +28,7 @@ Page({
       }]
     },
   bindInputBlur: function(e) {
+    console.log(e)
     this.inputValue = e.detail.value
   },
   bindButtonTap: function() {

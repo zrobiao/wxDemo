@@ -1,16 +1,49 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<view>
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+  </view> -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:220px;">
+    <block wx:for="{{imgArr}}">
+      <swiper-item class="slide-item">
+        <image src="{{item.src}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="view-items">
+    <text class="iconfont hph-ali-gerenzhenduan view-items-icon"></text>
+    <text class="view-items-txt">陪护医院:</text>
+    <input class="view-items-box" placeholder="贵阳白云区第一人民医院" />
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="view-items">
+    <text class="iconfont hph-ali-jiyinjiance view-items-icon"></text>
+    <text class="view-items-txt">开始时间：</text>
+    <picker class="view-items-box" mode="date" value="{{date}}" start="{{date}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
   </view>
-  <view class='definedemo'>
-    <text class='definedemo-text' bindtap='viewTest'>{{defText}}</text>
+  <view class="view-items">
+    <text class="iconfont hph-ali-jiyinjiance view-items-icon"></text>
+    <text class="view-items-txt">结束时间：</text>
+    <picker class="view-items-box" mode="date" value="{{date}}" start="{{date}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="view-items">
+    <text class="iconfont hph-ali-jiyinjiance view-items-icon"></text>
+    <text class="view-items-txt">护工性别：</text>
+    <checkbox-grop class="view-items-box" bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{checkGrop}}">
+        <checkbox value="{{item.name}}" checked="{{item.chenked}}">{{item.value}}</checkbox>
+      </label>
+    </checkbox-grop>
   </view>
 </view>
